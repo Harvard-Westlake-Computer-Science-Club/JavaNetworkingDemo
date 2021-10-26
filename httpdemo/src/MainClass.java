@@ -6,10 +6,31 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		// Get the HW authentication token from the user via prompt.
+		// In this demo, we'll be learning how to make web (HTTP) requests from our Java programs.
+		// This will come in useful for future projects such as our Internet of Things project, where
+		// we'll be connecting physical devices to Java programs! This is example code in case you get
+		// stuck / don't want to follow along.
 		
+		// This code uses our HW authentication token to fetch the cafeteria menu for this week. Since
+		// HW doesn't have a publicly-accessible API (application programming interface) meant for machines
+		// to read, we'll just have to get the webpage HTML that a normal use would get, and parse it using
+		// some String operations. This is normally a bad idea, since if the website designers change the
+		// design of the site, our code will break; but we don't have a better option right now.
+		
+		
+		
+		
+		
+		// Get the HW authentication token from the user via prompt.
+		// You can get your own auth token by:
+		// 	1) sign in to hw.com
+		//	2) open Chrome developer tools by right clicking anywhere -> "Inspect"
+		//	3) click on the Application tab; click on Cookies and choose "https://hw.com"
+		//	4) copy the value to the right of the ".DOTNETNUKE" entry
+		// Note: giving someone your authentication token is the same as giving them your password (it will give them access to your
+		// entire HW account) so don't share it!
 		Scanner keyboard = new Scanner(System.in);
-		System.out.println("What is your HW authentication token? :: ");
+		System.out.println("What is your HW authentication token?");
 		String token = keyboard.nextLine();
 		
 		try { // We'll wrap the entire code in a try/catch block to handle any errors that occur.
